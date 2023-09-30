@@ -26,10 +26,10 @@ let self = {
 
   bitcoind-mutinynet = self.bitcoind.overrideAttrs (old: {
     src = pkgs.fetchFromGitHub {
-      owner = "benthecarman";
+      owner = "chrisguida";
       repo = "bitcoin";
-      rev = "d8434da3c14ed6723d86ef2cd266008d366e1413";
-      sha256 = "sha256-Y3PjlKcH5DpfT+d2YAwPylNDJExB8Z0C0E4SB/Lt3vY=";
+      rev = "e9dda33151b01f893bcd20395d4606031c86bd39";
+      sha256 = "sha256-se2ujfUhj6YiuskXH1GrLpXXlxfHtuQFR52mX/vCfDs=";
     };
   });
 

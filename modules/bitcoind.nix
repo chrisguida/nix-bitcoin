@@ -197,7 +197,7 @@ let
         '';
       };
       dbCache = mkOption {
-        type = types.nullOr (types.ints.between 4 16384);
+        type = types.nullOr (types.ints.between 4 1048576);
         default = null;
         example = 4000;
         description = mdDoc "Override the default database cache size in MiB.";

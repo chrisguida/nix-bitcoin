@@ -37,6 +37,7 @@ let self = {
     mempool-backend
     mempool-frontend
     mempool-nginx-conf;
+  smaug = pkgs.callPackage ./smaug { };
   trustedcoin = pkgs.callPackage ./trustedcoin { };
 
   pyPkgs = import ./python-packages self pkgs.python3;

@@ -14,8 +14,8 @@ let self = {
     src = pkgs.fetchFromGitHub {
       owner = "benthecarman";
       repo = "bitcoin";
-      rev = "d8434da3c14ed6723d86ef2cd266008d366e1413";
-      sha256 = "sha256-Y3PjlKcH5DpfT+d2YAwPylNDJExB8Z0C0E4SB/Lt3vY=";
+      rev = "5706e1f94c3feca2bdf894fa7b770445addd6e89";
+      sha256 = "sha256-d2VXp/a545E7kuS04ByK4WD6BBJ1+Oz2jF17bNJZbU0=";
     };
   });
 

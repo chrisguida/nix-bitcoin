@@ -306,7 +306,7 @@ in {
     services.nginx = mkIf cfg.frontend.enable {
       enable = true;
       enableReload = true;
-      recommendedBrotliSettings = true;
+#      recommendedBrotliSettings = true;
       recommendedGzipSettings = true;
       recommendedOptimisation = true;
       recommendedProxySettings = true;

@@ -158,7 +158,12 @@ let
       };
       makeNetworkName = mkOption {
         readOnly = true;
-        default = mainnet: regtest: if cfg.regtest then regtest else "signet";
+        default = mainnet: regtest:
+          if cfg.regtest then
+            regtest
+          else if mainnet == "Main" then
+            "Signet"
+          else "signet";
       };
       proxy = mkOption {
         type = types.nullOr types.str;

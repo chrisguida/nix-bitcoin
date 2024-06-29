@@ -187,7 +187,7 @@ in {
       serviceConfig = nbLib.defaultHardening // {
         ExecStart = ''
           ${cfg.nbxplorer.package}/bin/nbxplorer --conf=${cfg.nbxplorer.dataDir}/settings.config \
-            --datadir=${cfg.nbxplorer.dataDir}
+            --datadir=${cfg.nbxplorer.dataDir} -v 1
         '';
         User = cfg.nbxplorer.user;
         Restart = "on-failure";
@@ -199,7 +199,7 @@ in {
 
     systemd.services.btcpayserver = let
       nbExplorerUrl = "http://${nbLib.addressWithPort cfg.nbxplorer.address cfg.nbxplorer.port}/";
-      nbExplorerCookie = "${cfg.nbxplorer.dataDir}/${bitcoind.makeNetworkName "Main" "RegTest"}/.cookie";
+      nbExplorerCookie = "${cfg.nbxplorer.dataDir}/${bitcoind.makeNetworkName "Main" "RegTest" }/.cookie";
       configFile = builtins.toFile "btcpayserver-config" (''
         network=${bitcoind.network}
         bind=${cfg.btcpayserver.address}

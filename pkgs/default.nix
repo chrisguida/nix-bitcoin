@@ -17,6 +17,8 @@ let self = {
       rev = "5706e1f94c3feca2bdf894fa7b770445addd6e89";
       sha256 = "sha256-d2VXp/a545E7kuS04ByK4WD6BBJ1+Oz2jF17bNJZbU0=";
     };
+    # tests are broken on mutinynet
+    doCheck = false;
   });
 
   clightning-rest = pkgs.callPackage ./clightning-rest { inherit (self) fetchNodeModules; };

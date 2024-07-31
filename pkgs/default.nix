@@ -10,7 +10,7 @@ in
   }
 }:
 let self = {
-  bitcoind-mutinynet = self.bitcoind.overrideAttrs (old: {
+  bitcoind-mutinynet = self.pinned.bitcoind.overrideAttrs (old: {
     src = pkgs.fetchFromGitHub {
       owner = "benthecarman";
       repo = "bitcoin";
